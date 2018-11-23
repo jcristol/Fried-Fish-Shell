@@ -1,3 +1,5 @@
+scribe
+python ~/.config/function_scribe.py | fish
 ls
 exa $argv
 cat
