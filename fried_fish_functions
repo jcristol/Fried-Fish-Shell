@@ -1,5 +1,5 @@
 sfunc
-cat fish_functions | python ~/.config/fried_fish_scribe.py | fish
+cat fried_fish_functions | python ~/.config/fried_fish_scribe.py | fish
 new_function
 vim ~/.config/fried_fish_functions
 ls
