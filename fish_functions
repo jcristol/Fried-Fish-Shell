@@ -1,5 +1,7 @@
-scribe
-python ~/.config/function_scribe.py | fish
+nfunc
+echo $argv[1] >> ~/.config/fish_functions; echo $argv[2] >> ~/.config/fish_functions
+sfunc
+cat fish_functions | python ~/.config/function_scribe.py | fish
 ls
 exa $argv
 cat
