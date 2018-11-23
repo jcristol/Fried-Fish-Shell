@@ -4,6 +4,7 @@ echo "installing a dope config"
 echo "WARNING!! This script removes the ~/.config directory"
 
 read -p  -n 1 -r "Would you like to proceed? "
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   cd ~
