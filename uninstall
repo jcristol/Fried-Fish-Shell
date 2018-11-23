@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Fried Fish Shell uninstaller script"
+
+echo "sorry to see you go"
+echo "WARNING!! This script removes the ~/.config and the ~/.local directories"
+
+read -p"Would you like to proceed? [y/n] " -n 1 -r 
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+        cd ~
+        rm -rf .config
+        rm -rf .local
+        chsh -s /bin/bash
+fi
+
