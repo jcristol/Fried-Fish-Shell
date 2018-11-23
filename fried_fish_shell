@@ -41,6 +41,6 @@ then
         rm -rf .local
         git clone https://github.com/jcristol/Fried-Fish-Shell .config
         cd .config
-        source ./install
+        source ./fried_fish_shell
         cd ~
 fi
