@@ -1,7 +1,13 @@
 #!/bin/bash
 
-echo "installing a dope config"
-echo "WARNING!! This script removes the ~/.config and the ~/.local directories"
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+
+echo
+echo "Welcome to ${GREEN}FRIED FISH"
+echo
+echo "${YELLOw}WARNING!! This script removes the ~/.config and the ~/.local directories"
 
 read -p"Would you like to proceed? [y/n] " -n 1 -r 
 echo
