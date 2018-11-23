@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 echo "installing a dope config"
 echo "WARNING!! This script removes the ~/.config directory"
 
@@ -7,5 +8,10 @@ read -p"Would you like to proceed? [y/n] " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+        cd ~
+        rm -irf .config
+        git clone https://github.com/jcristol/.config
+        cd .config
         source ./install
+        cd ~
 fi

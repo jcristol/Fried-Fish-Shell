@@ -1,8 +1,4 @@
 #!/bin/bash
-cd ~
-rm -irf .config
-git clone https://github.com/jcristol/.config
-
 brew install bat
 brew install exa
 brew install fish
