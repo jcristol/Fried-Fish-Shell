@@ -30,7 +30,7 @@ cecho(){
 echo
 echo "Welcome to FRIED FISH" | cecho LGREEN
 echo
-echo "WARNING!! This script removes the ~/.config and the ~/.local directories" | YELLOW
+echo "WARNING!! This script removes the ~/.config and the ~/.local directories" | cecho YELLOW
 
 read -p"Would you like to proceed? [y/n] " -n 1 -r 
 echo
