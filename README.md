@@ -1,3 +1,3 @@
 - install with `bash <(curl https://raw.githubusercontent.com/jcristol/Fried-Fish-Shell/master/install)`
-- uninstall with `bash <(curl https://raw.githubusercontent.com/jcristol/Fried-Fish-Shell/master/uninstall)`
+- uninstall with `curl https://raw.githubusercontent.com/jcristol/Fried-Fish-Shell/master/uninstall | bash`
 
