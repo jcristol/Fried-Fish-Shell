@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo "installing a dope config"
 echo "WARNING!! This script removes the ~/.config and the ~/.local directories"
 
