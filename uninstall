@@ -35,7 +35,7 @@ read -p"Would you like to proceed? [y/n] " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-        cd ~
+        cd; cd -
         rm -rf .config
         rm -rf .local
         echo "RUN $chsh -s /bin/bash" | cecho CYAN
