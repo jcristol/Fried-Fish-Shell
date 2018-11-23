@@ -28,16 +28,12 @@ cecho(){
 
 echo "Fried Fish Shell uninstaller script" | cecho LGREEN
 
-echo "sorry to see you go 😢" | cecho CYAN
-echo "WARNING!! This script removes the ~/.config and the ~/.local directories" | cecho YELLOW
+echo "Sorry to see you go 😢" | cecho CYAN
 
 read -p"Would you like to proceed? [y/n] " -n 1 -r 
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-        cd; cd -
-        rm -rf .config
-        rm -rf .local
-        echo "RUN $chsh -s /bin/bash" | cecho CYAN
+        echo "RUN $cd ~; rm -rf .config .local; chsh -s /bin/bash" | cecho CYAN
 fi
 
