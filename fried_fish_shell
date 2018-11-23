@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cecho(){
     BLACK="\033[0;30m"
     BLUE="\033[0;34m"
@@ -27,20 +26,41 @@ cecho(){
     echo -ne "${NORMAL}"
 }
 
+echo "Installing brew and brew packages" | cecho LGREEN
 echo
-echo "Welcome to FRIED FISH" | cecho LGREEN
-echo
-echo "WARNING!! This script removes the ~/.config and the ~/.local directories" | cecho YELLOW
+brew install bat
+brew install exa
+brew install fish
+brew install neovim
+brew install watchman
 
-read -p"Would you like to proceed? [y/n] " -n 1 -r 
+echo "Installing nvm" | cecho LGREEN
 echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-        cd ~
-        rm -rf .config
-        rm -rf .local
-        git clone https://github.com/jcristol/Fried-Fish-Shell .config
-        cd .config
-        source ./fried_fish_shell
-        cd ~
-fi
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+echo "Installing fisher the fish package manager" | cecho LGREEN
+echo
+fish -c "curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish"
+
+echo "Installing useful fish plugins" | cecho LGREEN
+echo
+fish -c "fisher add edc/bass"
+fish -c "fisher add FabioAntunes/fish-nvm"
+fish -c "fisher add jethrokuan/z"
+fish -c "fisher add laughedelic/fish_logo"
+fish -c "fisher add oh-my-fish/theme-default"
+fish -c "fisher add cbsghost/fish-legacycolor"
+fish -c "cat fish_functions | python ~/.config/function_scribe.py | fish"
+
+echo "Installing node using fnvm" | cecho LGREEN
+echo
+fish -c "nvm install node"
+
+echo "Changing the default shell will need your password twice" | cecho LGREEN
+echo
+chsh -s /usr/local/bin/fish
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+
+echo "Install oh my fish for a dope theme" | cecho LGREEN
+echo
+fish -c "curl -L https://get.oh-my.fish | fish"

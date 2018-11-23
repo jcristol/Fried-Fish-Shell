@@ -1,7 +1,7 @@
 sfunc
-cat fish_functions | python ~/.config/function_scribe.py | fish
+cat fish_functions | python ~/.config/fried_fish_scribe.py | fish
 new_function
-vim ~/.config/fish_functions
+vim ~/.config/fried_fish_functions
 ls
 exa $argv
 cat
