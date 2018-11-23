@@ -13,5 +13,8 @@ then
         rm -rf .config
         rm -rf .local
         chsh -s /bin/bash
+        echo "closing shell session"
+        echo "to see changes open new shell"
+        exit
 fi
 
