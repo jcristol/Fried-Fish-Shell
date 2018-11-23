@@ -19,7 +19,7 @@ fish -c "fisher add jethrokuan/z"
 fish -c "fisher add laughedelic/fish_logo"
 fish -c "fisher add oh-my-fish/theme-default"
 fish -c "fisher add cbsghost/fish-legacycolor"
-fish -c "fish fish_functions"
+fish -c "cat fish_functions | python function_scribe.py | fish"
 
 # install node
 fish -c "nvm install node"

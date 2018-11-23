@@ -1,32 +1,20 @@
-function ls
-  exa $argv
-end
-function cat
-  bat $argv
-end
-function gss
-  git status -s
-end
-function gc
-  git commit $argv
-end
-function ga
-  git add $argv
-end
-function gco
-  git checkout $argv
-end
-function gb
-  git branch $argv
-end
-function vim
-  nvim $argv
-end
-function nerd
-  npm run $argv
-end
-function fish_greeting
-  fish_logo
-end
-
-funcsave ls cat gss gc gc ga gco gb vim nerd fish_greeting
+ls
+exa $argv
+cat
+bat $argv
+gss
+git status -s
+gc
+git commit $argv
+ga
+git add $argv
+gco
+git checkout $argv
+gb
+git branch $argv
+vim
+nvim $argv
+nerd
+npm run $argv
+fish_greeting
+fish_logo
