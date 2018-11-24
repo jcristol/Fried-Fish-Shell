@@ -53,7 +53,7 @@ rm -rf $local
 
 # spicy && git clone https://github.com/jcristol/Fried-Fish-Shell $config
 
-printf "Installing brew packages\n\n" | cecho LGREEN
+printf "\n\nInstalling brew packages\n\n" | cecho LGREEN
 spicy && brew install bat
 spicy && brew install exa
 brew install fish
