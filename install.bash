@@ -51,7 +51,7 @@ local=~/.local
 rm -rf $config
 rm -rf $local
 
-# spicy && git clone https://github.com/jcristol/Fried-Fish-Shell $config
+spicy && git clone https://github.com/jcristol/Fried-Fish-Shell-Config $config
 
 printf "\n\nInstalling brew packages\n\n" | cecho LGREEN
 spicy && brew install bat
