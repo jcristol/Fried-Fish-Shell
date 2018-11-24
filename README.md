@@ -1,7 +1,7 @@
 ### Instruction Manuel
 
-- install with ``
-- uninstall with ``
+- install with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/jcristol/Fried-Fish-Shell/master/install.bash)"`
+- uninstall with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/jcristol/Fried-Fish-Shell/master/uninstall.bash)"`
 
 
 ### TODO
