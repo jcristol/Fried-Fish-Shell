@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cecho(){
     BLACK="\033[0;30m"
     BLUE="\033[0;34m"
@@ -27,20 +26,15 @@ cecho(){
     echo -ne "${NORMAL}"
 }
 
-echo
-echo "Welcome to FRIED FISH" | cecho LGREEN
-echo
-echo "WARNING!! This script removes the ~/.config and the ~/.local directories" | cecho YELLOW
+echo "Fried Fish Shell uninstaller script" | cecho LGREEN
 
-read -p"Would you like to proceed? [y/n] " -n 1 -r 
+echo "Sorry to see you go 😢" | cecho CYAN
+printf "WARNING!! This script removes the ~/.config and the ~/.local directories\n" | cecho YELLOW
+read -p "Would you like to proceed? [y/n] " -n 1 -r 
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-        cd ~
-        rm -rf .config
-        rm -rf .local
-        git clone https://github.com/jcristol/Fried-Fish-Shell .config
-        cd .config
-        source ./fried_fish_shell
-        cd ~
+    brew uninstall fish
+    cd ~; rm -rf .config .local; chsh -s /bin/bash;
+    echo "Open a new shell to see changes" | cecho LPURPLE
 fi
