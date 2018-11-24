@@ -3,7 +3,7 @@ cecho(){
     BLACK="\033[0;30m"
     BLUE="\033[0;34m"
     GREEN="\033[0;32m"
-    CYAN="\033[0;36m"
+    CYAN="\033[0;36m"https://github.com/jcristol/Fried-Fish-Shell/blob/master/uninstall
     RED="\033[0;31m"
     PURPLE="\033[0;35m"
     ORANGE="\033[0;33m"
@@ -29,5 +29,6 @@ cecho(){
 echo "Fried Fish Shell uninstaller script" | cecho LGREEN
 
 echo "Sorry to see you go 😢" | cecho CYAN
+brew uninstall fish
 cd ~; rm -rf .config .local; chsh -s /bin/bash; exit
 
