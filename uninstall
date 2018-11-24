@@ -29,5 +29,5 @@ cecho(){
 echo "Fried Fish Shell uninstaller script" | cecho LGREEN
 
 echo "Sorry to see you go 😢" | cecho CYAN
-cd ~; rm -rf .config .local; chsh -s /bin/bash
+cd ~; rm -rf .config .local; chsh -s /bin/bash; exit
 
